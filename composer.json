@@ -1,0 +1,13 @@
+{
+  "name": "gravity-platform/gravity",
+  "version: "0.0.1",
+  "require" {
+    "graviton/graviton": ">=0.1.1"
+  },
+  "repositories": [
+    {
+      "type": vcs",
+      "git@github.com:libgraviton/graviton.git"
+    }
+  ]
+}
