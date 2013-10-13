@@ -1,13 +1,29 @@
 {
   "name": "gravity-platform/gravity",
-  "version: "0.0.1",
-  "require" {
+  "version": "0.1.0-dev",
+  "autoload": {
+    "psr-0": { "GravityPlatform": "src/" }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "GravityPlatform\\Composer\\ScriptHandler::installNpmModules",
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton"
+    ],
+    "post-update-cmd": [
+      "GravityPlatform\\Composer\\ScriptHandler::updateNpmModules",
+      "GravityPlatform\\Composer\\ScriptHandler::updateGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton"
+    ]
+  },
+  "require": {
+    "symfony/process": "2.3.*",
     "graviton/graviton": ">=0.1.1"
   },
   "repositories": [
     {
-      "type": vcs",
-      "git@github.com:libgraviton/graviton.git"
+      "type": "vcs",
+      "url": "git@github.com:libgraviton/graviton.git"
     }
   ]
 }

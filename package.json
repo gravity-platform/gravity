@@ -1,0 +1,6 @@
+{
+  "name": "gravity-platform",
+  "dependencies": {
+    "graviphoton": "graviphoton/ui-core"
+  }
+}
