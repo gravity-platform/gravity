@@ -1,6 +1,6 @@
 {
   "name": "gravity-platform",
   "dependencies": {
-    "graviphoton": "graviphoton/ui-core"
+    "graviphoton": ">=0.0.1"
   }
 }
