@@ -37,7 +37,7 @@ class ScriptHandler
      */
     public static function installNpmModules(CommandEvent $event)
     {
-	self::runCommand('npm install');
+        self::runCommand('npm install');
     }
 
     /**
@@ -61,7 +61,7 @@ class ScriptHandler
      */
     public static function installGraviphoton(CommandEvent $event)
     {
-	self::runCommand('npm install --dev-all', self::GRAVIPHOTON_DIR);
+        self::runCommand('npm install --dev-all', self::GRAVIPHOTON_DIR);
     }
 
     /**
@@ -85,7 +85,55 @@ class ScriptHandler
      */
     public static function buildGraviphoton(CommandEvent $event)
     {
-	self::runCommand('./node_modules/grunt-cli/bin/grunt', self::GRAVIPHOTON_DIR);
+        self::runCommand('./node_modules/grunt-cli/bin/grunt', self::GRAVIPHOTON_DIR);
+    }
+
+    /**
+     * call bundle with vendorized install
+     *
+     * @param CommandEvent $event composer event
+     *
+     * @return void
+     */
+    public static function installLibrarianPuppet(CommandEvent $event)
+    {
+        self::runCommand('bundle install --path ruby_modules/');
+    }
+
+    /**
+     * call bundle with vendorized update
+     *
+     * @param CommandEvent $event composer event
+     *
+     * @return void
+     */
+    public static function updateLibrarianPuppet(CommandEvent $event)
+    {
+        self::runCommand('bundle update');
+    }
+
+    /**
+     * call librarian-puppet for vendorized install
+     *
+     * @param CommandEvent $event composer event
+     *
+     * @return void
+     */
+    public static function installPuppetModules(CommandEvent $event)
+    {
+        self::runCommand('./ruby_modules/ruby/1.8/bin/librarian-puppet install');
+    }
+
+    /**
+     * call librarian-puppet for vendorized update
+     *
+     * @param CommandEvent $event composer event
+     *
+     * @return void
+     */
+    public static function updatePuppetModules(CommandEvent $event)
+    {
+        self::runCommand('./ruby_modules/ruby/1.8/bin/librarian-puppet update');
     }
 
     /**
@@ -99,10 +147,10 @@ class ScriptHandler
     public static function runCommand($cmd, $cwd = null)
     {
         $process = new Process($cmd, $cwd, null, null, 0);
-	$process->run(function ($type, $buffer) { echo $buffer; });
+        $process->run(function ($type, $buffer) { echo $buffer; });
 
-	if (!$process->isSuccessful()) {
-	    throw new \RuntimeException('An error occurred while running '.$cmd);
-	}
+        if (!$process->isSuccessful()) {
+            throw new \RuntimeException('An error occurred while running '.$cmd);
+        }
     }
 }

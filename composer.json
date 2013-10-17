@@ -8,12 +8,16 @@
     "post-install-cmd": [
       "GravityPlatform\\Composer\\ScriptHandler::installNpmModules",
       "GravityPlatform\\Composer\\ScriptHandler::installGraviphoton",
-      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton"
+      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::installLibrarianPuppet",
+      "GravityPlatform\\Composer\\ScriptHandler::installPuppetModules"
     ],
     "post-update-cmd": [
       "GravityPlatform\\Composer\\ScriptHandler::updateNpmModules",
       "GravityPlatform\\Composer\\ScriptHandler::updateGraviphoton",
-      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton"
+      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::updateLibrarianPuppet",
+      "GravityPlatform\\Composer\\ScriptHandler::updatePuppetModules"
     ]
   },
   "require": {
