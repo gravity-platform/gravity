@@ -9,6 +9,8 @@ ruby_modules
 .librarian
 modules
 .vagrant
+app
+web
 
 # remove lines below here when we reach 1.0.0
 composer.lock
