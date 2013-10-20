@@ -8,16 +8,29 @@
     "post-install-cmd": [
       "GravityPlatform\\Composer\\ScriptHandler::installNpmModules",
       "GravityPlatform\\Composer\\ScriptHandler::installGraviphoton",
-      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton"
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviphotonFiles",
+      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::installLibrarianPuppet",
+      "GravityPlatform\\Composer\\ScriptHandler::installPuppetModules",
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviton"
     ],
     "post-update-cmd": [
       "GravityPlatform\\Composer\\ScriptHandler::updateNpmModules",
       "GravityPlatform\\Composer\\ScriptHandler::updateGraviphoton",
-      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton"
+      "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::updateLibrarianPuppet",
+      "GravityPlatform\\Composer\\ScriptHandler::updatePuppetModules",
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviton",
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviphotonFiles"
     ]
   },
   "require": {
     "symfony/process": "2.3.*",
     "graviton/graviton": "@dev"
+  },
+  "extra": {
+    "symfony-app-dir": "app",
+    "symfony-web-dir": "web"
   }
 }
