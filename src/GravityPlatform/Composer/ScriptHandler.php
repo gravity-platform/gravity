@@ -97,7 +97,7 @@ class ScriptHandler
      */
     public static function installLibrarianPuppet(CommandEvent $event)
     {
-        self::runCommand('bundle install --path ruby_modules/');
+        self::runCommand(self::findRubyBundler().' --path ruby_modules/');
     }
 
     /**
@@ -109,7 +109,7 @@ class ScriptHandler
      */
     public static function updateLibrarianPuppet(CommandEvent $event)
     {
-        self::runCommand('bundle update');
+        self::runCommand(self::findRubyBundler().' update');
     }
 
     /**
@@ -121,7 +121,7 @@ class ScriptHandler
      */
     public static function installPuppetModules(CommandEvent $event)
     {
-        self::runCommand('./ruby_modules/ruby/1.8/bin/librarian-puppet install');
+        self::runCommand(self::findRubyBundler().' exec '.self::findLibrarianPuppet().' install');
     }
 
     /**
@@ -133,7 +133,7 @@ class ScriptHandler
      */
     public static function updatePuppetModules(CommandEvent $event)
     {
-        self::runCommand('./ruby_modules/ruby/1.8/bin/librarian-puppet update');
+        self::runCommand(self::findRubyBundler().' exec '.self::findLibrarianPuppet().' update');
     }
 
     /**
@@ -220,5 +220,47 @@ class ScriptHandler
         if (!$process->isSuccessful()) {
             throw new \RuntimeException('An error occurred while running '.$cmd);
         }
+    }
+
+    /**
+     * find path to installed bundler
+     *
+     * @return String
+     */
+    public static function findRubyBundler()
+    {
+        static $bundler;
+
+        if (!empty($bundler)) {
+            return $bundler;
+        }
+
+        if (`which bundle-1.9`) {
+            $bundler = `which bundle-1.9`;
+        } else {
+            $bundler = `which bundle`;
+        }
+        $bundler = trim($bundler);
+
+        echo "Detected ruby bundler: ${bundler}".PHP_EOL;
+        return $bundler;
+    }
+
+    /**
+     * find librarian-puppet installed by ruby
+     *
+     * @return String
+     */
+    public static function findLibrarianPuppet()
+    {
+        static $librarian;
+        if (!empty($librarian)) {
+            return $librarian;
+        }
+        $librarian = `find ruby_modules/ -name 'librarian-puppet' -maxdepth 5`;
+        $librarian = trim($librarian);
+
+        echo "Found librarian-puppet: ${librarian}".PHP_EOL;
+        return $librarian;
     }
 }
