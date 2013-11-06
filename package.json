@@ -1,6 +1,6 @@
 {
   "name": "gravity-platform",
   "dependencies": {
-    "graviphoton": ">=0.0.1"
+    "graviphoton": ">=0.2.0"
   }
 }
