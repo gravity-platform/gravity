@@ -12,7 +12,7 @@
       "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton",
       "GravityPlatform\\Composer\\ScriptHandler::installLibrarianPuppet",
       "GravityPlatform\\Composer\\ScriptHandler::installPuppetModules",
-      "GravityPlatform\\Composer\\ScriptHandler::installGraviton"
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviton",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
@@ -25,7 +25,7 @@
       "GravityPlatform\\Composer\\ScriptHandler::updatePuppetModules",
       "GravityPlatform\\Composer\\ScriptHandler::installGraviton",
       "GravityPlatform\\Composer\\ScriptHandler::installGraviphoton",
-      "GravityPlatform\\Composer\\ScriptHandler::installGraviphotonFiles"
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviphotonFiles",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
