@@ -8,8 +8,9 @@
     "post-install-cmd": [
       "GravityPlatform\\Composer\\ScriptHandler::installNpmModules",
       "GravityPlatform\\Composer\\ScriptHandler::installGraviphoton",
-      "GravityPlatform\\Composer\\ScriptHandler::installGraviphotonFiles",
+      "GravityPlatform\\Composer\\ScriptHandler::installBowerModules",
       "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviphotonFiles",
       "GravityPlatform\\Composer\\ScriptHandler::installLibrarianPuppet",
       "GravityPlatform\\Composer\\ScriptHandler::installPuppetModules",
       "GravityPlatform\\Composer\\ScriptHandler::installGraviton",
@@ -20,12 +21,12 @@
     "post-update-cmd": [
       "GravityPlatform\\Composer\\ScriptHandler::updateNpmModules",
       "GravityPlatform\\Composer\\ScriptHandler::updateGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::updateBowerModules",
       "GravityPlatform\\Composer\\ScriptHandler::buildGraviphoton",
+      "GravityPlatform\\Composer\\ScriptHandler::installGraviphotonFiles",
       "GravityPlatform\\Composer\\ScriptHandler::updateLibrarianPuppet",
       "GravityPlatform\\Composer\\ScriptHandler::updatePuppetModules",
       "GravityPlatform\\Composer\\ScriptHandler::installGraviton",
-      "GravityPlatform\\Composer\\ScriptHandler::installGraviphoton",
-      "GravityPlatform\\Composer\\ScriptHandler::installGraviphotonFiles",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"

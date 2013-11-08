@@ -77,6 +77,30 @@ class ScriptHandler
     }
 
     /**
+     * call bower install in GRAVIPHOTON_DIR
+     *
+     * @param CommandEvent $event composer event
+     *
+     * @return void
+     */
+    public static function installBowerModules(CommandEvent $event)
+    {
+        self::runCommand('./node_modules/bower/bin/bower install', self::GRAVIPHOTON_DIR);
+    }
+
+    /**
+     * call bower update in GRAVIPHOTON_DIR
+     *
+     * @param CommandEvent $event composer event
+     *
+     * @return void
+     */
+    public static function updateBowerModules(CommandEvent $event)
+    {
+        self::runCommand('./node_modules/bower/bin/bower update', self::GRAVIPHOTON_DIR);
+    }
+
+    /**
      * call vendorized grunt in GRAVIPHOTON_DIR
      *
      * @param CommandEvent $event composer event
