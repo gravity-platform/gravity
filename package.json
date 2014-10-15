@@ -1,6 +1,6 @@
 {
   "name": "gravity-platform",
   "dependencies": {
-    "graviphoton": ">=0.2.0"
+    "graviphoton": "git://github.com/graviphoton/ui-core#develop"
   }
 }

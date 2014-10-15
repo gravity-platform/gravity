@@ -33,9 +33,10 @@
     ]
   },
   "require": {
-    "symfony/process": "2.3.*",
-    "graviton/graviton": "@dev"
+    "symfony/process": ">=2.3.0",
+    "graviton/graviton": "dev-develop"
   },
+  "minimum-stability": "dev",
   "extra": {
     "symfony-app-dir": "app",
     "symfony-web-dir": "web"
