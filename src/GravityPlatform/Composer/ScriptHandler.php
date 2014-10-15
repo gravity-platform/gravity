@@ -196,6 +196,7 @@ class ScriptHandler
         copy($gravitonDir.'/app/config/parameters_local.xml', $appDir.'/config/parameters_local.xml');
         copy($gravitonDir.'/app/config/routing.xml', $appDir.'/config/routing.xml');
         copy($gravitonDir.'/app/config/security.xml', $appDir.'/config/security.xml');
+        copy($gravitonDir.'/app/config/vcap.php', $appDir.'/config/vcap.php');
     }
 
     /**
@@ -217,7 +218,6 @@ class ScriptHandler
         copy($graviphotonDir.'/index.html', $webDir.'/index.html');
         copy($graviphotonDir.'/graviphoton.min.css', $webDir.'/graviphoton.min.css');
         copy($graviphotonDir.'/graviphoton.min.js', $webDir.'/graviphoton.min.js');
-        copy($graviphotonDir.'/graviphoton.less', $webDir.'/graviphoton.less');
         if (!is_dir($webDir.'/font')) {
             mkdir($webDir.'/font');
         }
