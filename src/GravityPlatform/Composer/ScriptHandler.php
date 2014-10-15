@@ -109,7 +109,7 @@ class ScriptHandler
      */
     public static function buildGraviphoton(CommandEvent $event)
     {
-        self::runCommand('./node_modules/grunt-cli/bin/grunt', self::GRAVIPHOTON_DIR);
+        self::runCommand('./node_modules/grunt-cli/bin/grunt --force', self::GRAVIPHOTON_DIR);
     }
 
     /**
