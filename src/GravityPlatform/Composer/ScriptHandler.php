@@ -266,6 +266,11 @@ class ScriptHandler
         }
         $bundler = trim($bundler);
 
+        if (empty($bundler)) {
+            echo "No ruby bundler detected, please install bundler with 'gem install bundler' ";
+            return false;
+        }
+
         echo "Detected ruby bundler: ${bundler}".PHP_EOL;
         return $bundler;
     }
