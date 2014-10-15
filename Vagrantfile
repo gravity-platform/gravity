@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # You might want to create symlink called base to the box you are using.
   # This Vagrant file uses the "base" box due to it being the de facto
   # default.
-  config.vm.box = "base"
+  config.vm.box = "puppetlabs/centos-6.5-64-puppet"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
