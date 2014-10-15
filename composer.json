@@ -15,7 +15,6 @@
       "GravityPlatform\\Composer\\ScriptHandler::installPuppetModules",
       "GravityPlatform\\Composer\\ScriptHandler::installGraviton",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
     ],
     "post-update-cmd": [
