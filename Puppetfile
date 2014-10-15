@@ -1,4 +1,4 @@
-forge "http://forge.puppetlabs.com"
+forge "https://forgeapi.puppetlabs.com"
 
 mod "gravity",
   :git => "https://github.com/gravity-platform/puppet-gravity.git",
