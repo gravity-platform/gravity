@@ -26,7 +26,7 @@ class ScriptHandler
      *
      * @const String
      */
-    const GRAVIPHOTON_DIR = 'node_modules/graviphoton';
+    const GRAVIPHOTON_DIR = 'node_modules/graviphoton/';
 
     /**
      * call npm install
@@ -242,7 +242,7 @@ class ScriptHandler
         $process->run(function ($type, $buffer) { echo $buffer; });
 
         if (!$process->isSuccessful()) {
-            throw new \RuntimeException('An error occurred while running '.$cmd);
+            throw new \RuntimeException('An error occurred while running '.$cmd.' in '.$cwd);
         }
     }
 
