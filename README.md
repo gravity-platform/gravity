@@ -15,5 +15,6 @@ mv composer.phar /usr/local/bin/composer
 ````bash
 composer install
 vagrant up
+vagrant reload # to get rid of some startup dependency problems with apache
 ````
 
